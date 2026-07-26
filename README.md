@@ -137,12 +137,14 @@ Alınan önlemler:
 - `prefers-reduced-motion` desteği
 - Yazdırma stili (`@media print`)
 - Yazı tipleri Google Fonts'tan çekilir; internet yoksa sistem fontlarına düşer
-- Form arka uç gerektirmez; girilen bilgileri hazır WhatsApp mesajına çevirir
+- Form arka uç gerektirmez; girilen bilgileri hazır WhatsApp mesajına ya da e-postaya çevirir
+- Hatalı adreslerde site temasına uygun `404.html` gösterilir
 
 ## Sonraki adımlar (isteğe bağlı)
 
-- Eren hocanın fotoğrafı ve kurum bilgisi
+- Eren hocanın fotoğrafı (şu an "EK" baş harfleri duruyor) ve kurum bilgisi
+- Gerçek öğrenci/veli yorumları toplanınca Yorumlar bölümünü geri ekleme
+- Instagram / YouTube hesapları (`index.html` içinde yorum satırında hazır)
+- Google Search Console'a `sitemap.xml` bildirimi + Google Business kaydı
 - Blog / konu anlatım notları bölümü
-- Google Analytics veya benzeri ölçümleme
-- Eren hocanın fotoğrafı (şu an "EK" baş harfleri duruyor)
-- `sitemap.xml`, `robots.txt` ve Google Business kaydı (yerel SEO için)
+- Ziyaretçi ölçümleme (Google Analytics, Plausible vb.)
