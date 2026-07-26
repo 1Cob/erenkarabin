@@ -144,5 +144,5 @@ Alınan önlemler:
 - Eren hocanın fotoğrafı ve kurum bilgisi
 - Blog / konu anlatım notları bölümü
 - Google Analytics veya benzeri ölçümleme
-- Alan adı + ücretsiz yayın (GitHub Pages, Netlify, Cloudflare Pages)
+- Eren hocanın fotoğrafı (şu an "EK" baş harfleri duruyor)
 - `sitemap.xml`, `robots.txt` ve Google Business kaydı (yerel SEO için)
