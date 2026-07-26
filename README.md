@@ -50,23 +50,48 @@ içindeki `EMAIL_ADDRESS` sabiti.
 > nokta geçersiz bir e-posta adresi oluşturduğu için `erenkarabin@hotmail.com` olarak
 > yazıldı. Adres farklıysa yukarıdaki yerlerde güncellenmeli.
 
-## Alan adı ve yayına alma
+## Yayın altyapısı
 
-Alan adı Squarespace'ten alındı: **www.erenkarabin.com**. Bu statik site Squarespace'in
-site kurucusunu kullanmıyor; alan adını herhangi bir ücretsiz statik hosting'e
-yönlendirmek yeterli.
+Site **GitHub Pages** üzerinde yayında. Netlify, Vercel gibi başka bir servis
+kullanılmıyor — hiçbir yere dosya yüklemeye gerek yok.
 
-**Önerilen: Cloudflare Pages veya Netlify** (ikisi de ücretsiz, otomatik HTTPS)
+```
+Yerel klasör  ──git push──▶  github.com/1Cob/erenkarabin  ──▶  www.erenkarabin.com
+```
 
-1. Klasörü Netlify'a sürükleyip bırakın (netlify.com/drop) — site anında yayına girer
-2. Netlify panelinde *Domain settings → Add custom domain* → `www.erenkarabin.com`
-3. Squarespace *Domains → DNS Settings* bölümünde:
-   - `www` için **CNAME** kaydı → Netlify'ın verdiği adres (`xxx.netlify.app`)
-   - Kök alan adı için **A** kaydı → Netlify'ın verdiği IP (`75.2.60.5`)
-4. DNS yayılması 15 dk – 24 saat sürebilir; HTTPS sertifikası otomatik gelir
+| Bileşen | Değer |
+|---|---|
+| Depo | https://github.com/1Cob/erenkarabin (public) |
+| Yayın | GitHub Pages · `main` dalı · kök dizin |
+| Alan adı | www.erenkarabin.com (`CNAME` dosyasıyla tanımlı) |
+| DNS | Squarespace'te barındırılıyor, GitHub IP'lerini gösteriyor |
 
-Yayına alındıktan sonra Google Search Console'a `sitemap.xml` adresini bildirin
-ve Google Business profili oluşturun — yerel aramalarda çıkmak için ikisi de gerekli.
+### Güncelleme nasıl yapılır?
+
+Dosyaları düzenleyip commit'leyip push'lamak yeterli — 1-2 dakika içinde canlıya yansır:
+
+```bash
+git add -A
+git commit -m "açıklama"
+git push
+```
+
+### DNS kayıtları (Squarespace · Özel kayıtlar)
+
+| Ad | Tür | Veri |
+|---|---|---|
+| `www` | CNAME | `1cob.github.io` |
+| `@` | A | `185.199.108.153` |
+| `@` | A | `185.199.109.153` |
+| `@` | A | `185.199.110.153` |
+| `@` | A | `185.199.111.153` |
+
+`erenkarabin.com` otomatik olarak `www.erenkarabin.com` adresine yönlenir.
+
+### Yayın sonrası yapılacaklar
+
+- Google Search Console'a siteyi ekleyip `sitemap.xml` bildirin
+- Google Business profili oluşturun (yerel aramalarda haritada çıkmak için)
 
 ## Yayına almadan önce kalan eksikler
 
